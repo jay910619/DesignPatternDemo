@@ -6,7 +6,7 @@ package com.example.jc.myapplication.builder.normal;
  * @desc
  */
 
-public class WaiterController {
+public class MenuController {
 
   private String food;
   private String drink;
@@ -43,7 +43,7 @@ public class WaiterController {
     this.remark = remark;
   }
 
-  public static class AlertParams {
+  public static class MenuParams {
 
     public String food;
     public String drink;
@@ -51,7 +51,7 @@ public class WaiterController {
     public int type;
     public String remark;
 
-    public void apply(WaiterController waiter) {
+    public void apply(MenuController waiter) {
       if (drink != null) {
         waiter.setDrink(drink);
       }
@@ -76,7 +76,7 @@ public class WaiterController {
   }
 
   @Override public String toString() {
-    return "WaiterController{" + (food != null ? "food='" + food + '\'' : "")
+    return "MenuController{" + (food != null ? "food='" + food + '\'' : "")
 
         + (drink != null ? ", drink='" + drink + '\'' : "")
 

@@ -1,7 +1,5 @@
 package com.example.jc.myapplication.builder.normal;
 
-import android.support.v7.app.AlertDialog;
-
 /**
  * @author jc
  * @time 2018/3/26 上午10:18
@@ -9,19 +7,17 @@ import android.support.v7.app.AlertDialog;
  */
 
 public class WaiterX {
-  private WaiterController mWaiter;
+  private MenuController mWaiter;
 
   WaiterX() {
-    mWaiter = new WaiterController();
+    mWaiter = new MenuController();
   }
 
-
-
   public static class Builder {
-    private WaiterController.AlertParams p;
+    private MenuController.MenuParams p;
 
     public Builder() {
-      p = new WaiterController.AlertParams();
+      p = new MenuController.MenuParams();
     }
 
     public Builder setFood(String food) {
