@@ -16,35 +16,44 @@ public class Test {
     user.setName("悟空");
     user.setPhone("100000");
     user.setAddress(new Address("傲来国", "东胜神州", "花果山", "水帘洞"));
-    //user.setExtraInfo(new ExtraInfo(1, "今朝有酒今朝醉，莫管门前是与非", new ArrayList<String>() {{
-    //  add("猴子");
-    //  add("齐天大圣");
-    //}}));
+    user.setLabel(new ArrayList<String>() {{
+      add("猴子");
+      add("齐天大圣");
+    }});
 
     Login login = new LoginImpl();
     login.login(user);
 
-    User loginUser = LoginSession.getInstance().getLoginUser();
-    System.out.println("取到的登录用户：" + loginUser.toString());
+    System.out.println("---------登录用户----------");
+    user.show();
 
-    loginUser.setName("Statue Of Liberty");
-    loginUser.setPhone("100011");
-    loginUser.setAddress(new Address("America", "New York", "Manhattan", "Wall Street"));
-    //loginUser.setExtraInfo(new ExtraInfo(2, "Give me your tired your poor,\n"
-    //    + "Your huddled masses yearning to breathe free,\n"
-    //    + "The wretched refuse of your teeming shore.\n"
-    //    + "Send these, the homeless, tempest-tossed to me,\n"
-    //    + "I lift my lamp beside the golden door", new ArrayList<String>() {{
-    //  add("freedom");
-    //}}));
-    System.out.println("修改后的登录用户副本:" + loginUser.toString());
-    User loginUserChanged = loginUser;
+    User newUser = LoginSession.getInstance().getLoginUser();
+    System.out.println("---------取到的登录用户副本----------");
+    newUser.show();
 
-    loginUser = LoginSession.getInstance().getLoginUser();
-    System.out.println("修改副本后取到的登录用户：" + loginUser.toString());
+    System.out.println("---------内存地址判断start----------");
+    System.out.println("Name ：" + (user.getName() == newUser.getName()));
+    System.out.println("Address ：" + (user.getAddress() == newUser.getAddress()));
+    System.out.println("---------内存地址判断end-------------");
 
-    login.login(loginUserChanged);
-    loginUser = LoginSession.getInstance().getLoginUser();
-    System.out.println("取到的登录用户:" + loginUser.toString());
+    newUser.setName("Statue Of Liberty");
+    newUser.setPhone("100011");
+
+    newUser.getAddress().setCountry("America");
+    newUser.getAddress().setProvince("New York");
+    newUser.getAddress().setCity("Manhattan");
+    newUser.getAddress().setStreet("Wall Street");
+
+    newUser.addLabel("freedom");
+
+    System.out.println("---------修改后的登录用户副本----------");
+    newUser.show();
+
+    System.out.println("---------修改副本后取到的登录用户----------");
+    LoginSession.getInstance().getLoginUser().show();
+
+    login.login(newUser);
+    System.out.println("---------变更登录后取到的登录用户----------");
+    LoginSession.getInstance().getLoginUser().show();
   }
 }

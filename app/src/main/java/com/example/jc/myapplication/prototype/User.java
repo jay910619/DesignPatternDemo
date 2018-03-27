@@ -1,18 +1,35 @@
 package com.example.jc.myapplication.prototype;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author jc
  * @time 2018/3/26 下午9:31
  * @desc
  */
 
-public class User implements Cloneable{
+public class User implements Cloneable {
   private int id;
   private String name;
   private String phone;
   private Address address;
-  private ExtraInfo extraInfo;
-  private UserToken mUserToken;
+  /**
+   * 用户标签
+   */
+  private ArrayList<String> label;
+
+  public List<String> getLabel() {
+    return label;
+  }
+
+  public void setLabel(ArrayList<String> label) {
+    this.label = label;
+  }
+
+  public void addLabel(String lb) {
+    label.add(lb);
+  }
 
   public int getId() {
     return id;
@@ -46,48 +63,30 @@ public class User implements Cloneable{
     this.address = address;
   }
 
-  public ExtraInfo getExtraInfo() {
-    return extraInfo;
-  }
-
-  public void setExtraInfo(ExtraInfo extraInfo) {
-    this.extraInfo = extraInfo;
-  }
-
-  public UserToken getUserToken() {
-    return mUserToken;
-  }
-
-  public void setUserToken(UserToken userToken) {
-    mUserToken = userToken;
-  }
-
-  @Override protected User clone()  {
-    User user=null;
+  @Override protected User clone() {
+    User user = null;
     try {
-      user= (User) super.clone();
+      user = (User) super.clone();
+      user.address = this.address.clone();
+      user.label = (ArrayList<String>) this.label.clone();
     } catch (CloneNotSupportedException e) {
       e.printStackTrace();
     }
     return user;
   }
 
-  @Override public String toString() {
-    return "User{"
-        + "id="
-        + id
-        + ", name='"
-        + name
-        + '\''
-        + ", phone='"
-        + phone
-        + '\''
-        + ", address="
-        + address
-        + ", extraInfo="
-        + extraInfo
-        + ", mUserToken="
-        + mUserToken
-        + '}';
+  public void show() {
+    System.out.println("----- User start-------");
+    System.out.println("name : " + getName());
+    System.out.println("phone : " + getPhone());
+
+    System.out.println("city: " + getAddress().getCity());
+    System.out.println("province: " + getAddress().getProvince());
+    System.out.println("street: " + getAddress().getStreet());
+
+    for (String s : getLabel()) {
+      System.out.println("label : " + s);
+    }
+    System.out.println("----- User end-------");
   }
 }

@@ -6,12 +6,18 @@ package com.example.jc.myapplication.prototype;
  * @desc
  */
 
-public class Address implements Cloneable{
+public class Address implements Cloneable {
 
   private String country;
   private String province;
   private String city;
   private String street;
+
+  public Address(String country, String province, String city) {
+    this.country = country;
+    this.province = province;
+    this.city = city;
+  }
 
   public Address(String country, String province, String city, String street) {
     this.country = country;
