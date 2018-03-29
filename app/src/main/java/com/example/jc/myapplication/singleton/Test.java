@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author jc
  * @time 2018/3/24 下午12:11
- * @desc 测试类
+ * @desc 单例模式测试类
  */
 
 public class Test {
