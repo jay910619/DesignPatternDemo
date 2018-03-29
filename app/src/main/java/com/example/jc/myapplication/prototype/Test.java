@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * @author jc
  * @time 2018/3/26 下午10:03
- * @desc
+ * @desc 原型模式测试类
  */
 
 public class Test {

@@ -3,7 +3,7 @@ package com.example.jc.myapplication.builder.normal;
 /**
  * @author jc
  * @time 2018/3/26 上午10:36
- * @desc
+ * @desc  建造者模式测试
  */
 
 public class Test {
