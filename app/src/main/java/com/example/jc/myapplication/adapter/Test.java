@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @author jc
  * @time 2018/3/26 上午10:02
- * @desc 适配器模式测试
+ * @desc
  */
 
 public class Test {

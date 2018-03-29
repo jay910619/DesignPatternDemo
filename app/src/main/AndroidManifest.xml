@@ -10,13 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".strategy.TestActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AbstractFactory.AbstractFactoryActivity" />
+        <activity
+            android:name=".Utils.DragActivity"
+            android:label="@string/title_activity_drag"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Builder.BuilderActivity" />
+        <activity android:name=".Adapter.AdapterActivity" />
+        <activity android:name=".Service.ServiceActivity" />
+        <activity android:name=".Observer.ObserverActivity" />
+        <activity android:name=".Observer.ObserverActivity2"></activity>
     </application>
 
 </manifest>
