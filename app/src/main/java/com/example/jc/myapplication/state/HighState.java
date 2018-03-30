@@ -26,7 +26,7 @@ public class HighState implements State {
   @Override public void posted(int score) {
     System.out.println(mAccount.getName() + "发布新帖，增加" + score + "*2 积分");
     this.point += score * 2;
-    checkState(score);
+    checkState(score * 2);
     System.out.println("剩余积分为" + mAccount.getPoint() + ", 当前级别为" + mAccount.getStateName());
   }
 
