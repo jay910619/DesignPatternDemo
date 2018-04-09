@@ -11,9 +11,9 @@ public class Test {
   public static void main(String[] args) {
 
     // 处理者对象
-    Leader handler1 = new Director("沙僧");
+    Leader handler1 = new TeamLeader("沙僧");
     Leader handler2 = new Manager("八戒");
-    Leader handler3 = new GeneralManager("悟空");
+    Leader handler3 = new Director("悟空");
     Leader handler4 = new Boss(" 唐僧");
 
     //  请求者对象
@@ -43,10 +43,10 @@ public class Test {
     System.out.println("-----------request5-------------");
     handler1.handlerRequest(request5);
 
-    //System.out.println("-----------request1-------------");
-    //handler3.handlerRequest(request1);
-    //
-    //System.out.println("-----------request4-------------");
-    //handler3.handlerRequest(request4);
+    System.out.println("-----------request1-------------");
+    handler3.handlerRequest(request1);
+
+    System.out.println("-----------request4-------------");
+    handler3.handlerRequest(request4);
   }
 }
