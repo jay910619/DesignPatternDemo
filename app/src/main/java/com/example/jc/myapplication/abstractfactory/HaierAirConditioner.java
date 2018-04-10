@@ -9,6 +9,6 @@ import android.util.Log;
 public class HaierAirConditioner implements AirConditioner {
     @Override
     public void changeTemperature() {
-      System.out.print( " 海尔空调改调温");
+        System.out.print(" 海尔空调改调温");
     }
 }

@@ -7,18 +7,20 @@ package com.example.jc.myapplication.singleton;
  */
 
 public enum SingletonEnum {
-  INSTANCE;
+    INSTANCE;
 
-  private String tagName;
-  public void setTag(String tagName) {
-    this.tagName = tagName;
-  }
+    private String tagName;
 
-  public String getTag() {
-    return tagName;
-  }
+    public void setTag(String tagName) {
+        this.tagName = tagName;
+    }
 
-  @Override public String toString() {
-    return "SingletonEnum{" + "tagName='" + tagName + '\'' + '}';
-  }
+    public String getTag() {
+        return tagName;
+    }
+
+    @Override
+    public String toString() {
+        return "SingletonEnum{" + "tagName='" + tagName + '\'' + '}';
+    }
 }

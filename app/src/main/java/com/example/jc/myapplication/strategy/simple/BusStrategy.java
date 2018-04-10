@@ -7,13 +7,14 @@ package com.example.jc.myapplication.strategy.simple;
  */
 
 public class BusStrategy implements CalculateStrategy {
-  @Override public int calculatePrice(int km) {
-    int extraTotal = km - 10;
-    //  超出10km部分  每5km需额外付1元 不足5km按照5km计算
-    int extraFactor = extraTotal / 5;
-    int fraction = extraTotal % 5;
-    int price = 1 + extraFactor * 1;
+    @Override
+    public int calculatePrice(int km) {
+        int extraTotal = km - 10;
+        //  超出10km部分  每5km需额外付1元 不足5km按照5km计算
+        int extraFactor = extraTotal / 5;
+        int fraction = extraTotal % 5;
+        int price = 1 + extraFactor * 1;
 
-    return fraction > 0 ? ++price : price;
-  }
+        return fraction > 0 ? ++price : price;
+    }
 }

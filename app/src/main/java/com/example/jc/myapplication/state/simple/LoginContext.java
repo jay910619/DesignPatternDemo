@@ -9,26 +9,26 @@ import android.content.Context;
  */
 
 public class LoginContext {
-  private UserState mState = new LogoutState();
+    private UserState mState = new LogoutState();
 
-  static LoginContext sLoginContext = new LoginContext();
+    static LoginContext sLoginContext = new LoginContext();
 
-  private LoginContext() {
-  }
+    private LoginContext() {
+    }
 
-  public static LoginContext getLoginContext() {
-    return sLoginContext;
-  }
+    public static LoginContext getLoginContext() {
+        return sLoginContext;
+    }
 
-  public void setState(UserState state) {
-    mState = state;
-  }
+    public void setState(UserState state) {
+        mState = state;
+    }
 
-  public void forward(Context context) {
-    mState.forward(context);
-  }
+    public void forward(Context context) {
+        mState.forward(context);
+    }
 
-  public void comment(Context context) {
-    mState.comment(context);
-  }
+    public void comment(Context context) {
+        mState.comment(context);
+    }
 }

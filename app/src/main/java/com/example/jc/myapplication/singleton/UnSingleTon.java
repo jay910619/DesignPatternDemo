@@ -7,9 +7,9 @@ package com.example.jc.myapplication.singleton;
  */
 
 public class UnSingleTon {
-  private int id;
+    private int id;
 
-  public int getId() {
-    return id;
-  }
+    public int getId() {
+        return id;
+    }
 }

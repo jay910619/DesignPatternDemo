@@ -8,5 +8,5 @@ package com.example.jc.myapplication.factory;
 
 public abstract class ImageFactory {
 
-  abstract <T extends Image> T getImage(Class<T> clz);
+    abstract <T extends Image> T getImage(Class<T> clz);
 }

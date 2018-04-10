@@ -7,14 +7,14 @@ package com.example.jc.myapplication.singleton;
  */
 
 public class SingleTon3 {
-  private SingleTon3() {
-  }
+    private SingleTon3() {
+    }
 
-  public static SingleTon3 getInstance() {
-    return SingletonHolder.sInstance;
-  }
+    public static SingleTon3 getInstance() {
+        return SingletonHolder.sInstance;
+    }
 
-  private static class SingletonHolder {
-    private static final SingleTon3 sInstance = new SingleTon3();
-  }
+    private static class SingletonHolder {
+        private static final SingleTon3 sInstance = new SingleTon3();
+    }
 }

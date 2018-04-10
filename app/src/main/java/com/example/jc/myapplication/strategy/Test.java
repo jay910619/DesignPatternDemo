@@ -8,25 +8,25 @@ package com.example.jc.myapplication.strategy;
 
 public class Test {
 
-  public static void main(String[] args) {
-    int[] arr = { 1, 3, 6, 2, 77, 34, 5, 8, 32, 55, 6, 78, 9 };
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 6, 2, 77, 34, 5, 8, 32, 55, 6, 78, 9};
 
-    int[] result;
+        int[] result;
 
-    ArrayHandler ah = new ArrayHandler();
+        ArrayHandler ah = new ArrayHandler();
 
-    ah.setSort(new BubbleSort());
+        ah.setSort(new BubbleSort());
 
-    //ah.setSort(new InsertionSort());
+        //ah.setSort(new InsertionSort());
 
-    //ah.setSort(new SelectionSort());
+        //ah.setSort(new SelectionSort());
 
-    //ah.setSort(new QuickSort());
+        //ah.setSort(new QuickSort());
 
-    result = ah.sort(arr);
+        result = ah.sort(arr);
 
-    for (Integer a : result) {
-      System.out.print(a + ",");
+        for (Integer a : result) {
+            System.out.print(a + ",");
+        }
     }
-  }
 }

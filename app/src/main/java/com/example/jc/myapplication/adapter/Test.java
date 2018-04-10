@@ -1,6 +1,7 @@
 package com.example.jc.myapplication.adapter;
 
 import com.orhanobut.logger.Logger;
+
 import java.util.Arrays;
 
 /**
@@ -10,17 +11,17 @@ import java.util.Arrays;
  */
 
 public class Test {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    int[] array = { 32, 11, 2, 4, 9, 3, 5, 63, 24, 53, 2543, 534, 7878, 235 };
+        int[] array = {32, 11, 2, 4, 9, 3, 5, 63, 24, 53, 2543, 534, 7878, 235};
 
-    OperationAdapter adapter = new OperationAdapter();
-    adapter.sort(array);
+        OperationAdapter adapter = new OperationAdapter();
+        adapter.sort(array);
 
-    System.out.print(Arrays.toString(array));
+        System.out.print(Arrays.toString(array));
 
-    int i = adapter.search(array, 4);
+        int i = adapter.search(array, 4);
 
-    System.out.print("search " + i);
-  }
+        System.out.print("search " + i);
+    }
 }

@@ -6,5 +6,6 @@ package com.example.jc.myapplication.adapter;
 
 public interface DataOperation {
     void sort(int[] array);
-    int search(int[] array,int i);
+
+    int search(int[] array, int i);
 }

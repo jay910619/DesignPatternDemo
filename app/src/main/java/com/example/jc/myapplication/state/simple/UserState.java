@@ -10,7 +10,7 @@ import android.content.Context;
 
 public interface UserState {
 
-  void forward(Context context);
+    void forward(Context context);
 
-  void comment(Context context);
+    void comment(Context context);
 }

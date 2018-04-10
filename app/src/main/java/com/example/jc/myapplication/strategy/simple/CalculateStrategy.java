@@ -8,11 +8,11 @@ package com.example.jc.myapplication.strategy.simple;
 
 public interface CalculateStrategy {
 
-  /**
-   * 根据距离计算价格
-   *
-   * @param km 公里 路程
-   * @return 价格
-   */
-  int calculatePrice(int km);
+    /**
+     * 根据距离计算价格
+     *
+     * @param km 公里 路程
+     * @return 价格
+     */
+    int calculatePrice(int km);
 }

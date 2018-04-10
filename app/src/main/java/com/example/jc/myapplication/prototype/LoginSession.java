@@ -8,27 +8,27 @@ package com.example.jc.myapplication.prototype;
 
 public class LoginSession {
 
-  private static LoginSession sLoginSession = new LoginSession();
+    private static LoginSession sLoginSession = new LoginSession();
 
-  private User mUser;
+    private User mUser;
 
-  private LoginSession() {
-  }
+    private LoginSession() {
+    }
 
-  public static LoginSession getInstance() {
-    return sLoginSession;
-  }
+    public static LoginSession getInstance() {
+        return sLoginSession;
+    }
 
-  public User getLoginUser() {
-    return mUser.clone();
-  }
+    public User getLoginUser() {
+        return mUser.clone();
+    }
 
-  //public User getLoginUser() {
-  //  return mUser;
-  //}
+    //public User getLoginUser() {
+    //  return mUser;
+    //}
 
 
-  public void setLoginUser(User user) {
-    mUser = user;
-  }
+    public void setLoginUser(User user) {
+        mUser = user;
+    }
 }

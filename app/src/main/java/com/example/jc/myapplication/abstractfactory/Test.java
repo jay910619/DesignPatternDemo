@@ -7,13 +7,13 @@ package com.example.jc.myapplication.abstractfactory;
  */
 
 public class Test {
-  public static void main(String[] args) {
-    EFactory factory = new TCLFactory();
-    Television tv = factory.produceTelevision();
-    tv.play();
-    AirConditioner ac = factory.produceAirConditioner();
-    ac.changeTemperature();
+    public static void main(String[] args) {
+        EFactory factory = new TCLFactory();
+        Television tv = factory.produceTelevision();
+        tv.play();
+        AirConditioner ac = factory.produceAirConditioner();
+        ac.changeTemperature();
 
-  }
+    }
 
 }

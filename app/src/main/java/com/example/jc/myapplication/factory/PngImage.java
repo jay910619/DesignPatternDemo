@@ -7,7 +7,8 @@ package com.example.jc.myapplication.factory;
  */
 
 public class PngImage extends Image {
-  @Override void show() {
-    System.out.println(this.toString() + " 展示 PNG 图片");
-  }
+    @Override
+    void show() {
+        System.out.println(this.toString() + " 展示 PNG 图片");
+    }
 }

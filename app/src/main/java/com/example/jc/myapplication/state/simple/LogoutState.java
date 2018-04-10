@@ -10,16 +10,18 @@ import android.content.Intent;
  */
 
 public class LogoutState implements UserState {
-  @Override public void forward(Context context) {
-    goLoginActivity(context);
-  }
+    @Override
+    public void forward(Context context) {
+        goLoginActivity(context);
+    }
 
-  @Override public void comment(Context context) {
-    goLoginActivity(context);
-  }
+    @Override
+    public void comment(Context context) {
+        goLoginActivity(context);
+    }
 
-  private void goLoginActivity(Context context) {
-    Intent intent = new Intent(context, LoginActivity.class);
-    context.startActivity(intent);
-  }
+    private void goLoginActivity(Context context) {
+        Intent intent = new Intent(context, LoginActivity.class);
+        context.startActivity(intent);
+    }
 }

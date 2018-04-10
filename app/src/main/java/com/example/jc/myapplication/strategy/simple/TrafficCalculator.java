@@ -8,13 +8,13 @@ package com.example.jc.myapplication.strategy.simple;
 
 public class TrafficCalculator {
 
-  CalculateStrategy mStrategy;
+    CalculateStrategy mStrategy;
 
-  public void setStrategy(CalculateStrategy strategy) {
-    mStrategy = strategy;
-  }
+    public void setStrategy(CalculateStrategy strategy) {
+        mStrategy = strategy;
+    }
 
-  public int calculatePrice(int km) {
-   return mStrategy.calculatePrice(km);
-  }
+    public int calculatePrice(int km) {
+        return mStrategy.calculatePrice(km);
+    }
 }

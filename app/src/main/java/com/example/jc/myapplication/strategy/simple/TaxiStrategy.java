@@ -6,12 +6,13 @@ package com.example.jc.myapplication.strategy.simple;
  * @desc
  */
 
-public class TaxiStrategy implements CalculateStrategy{
-  @Override public int calculatePrice(int km) {
-    if (km < 10) {
-      return 12;
-    } else {
-      return 16 + (km - 10) * 2;
+public class TaxiStrategy implements CalculateStrategy {
+    @Override
+    public int calculatePrice(int km) {
+        if (km < 10) {
+            return 12;
+        } else {
+            return 16 + (km - 10) * 2;
+        }
     }
-  }
 }

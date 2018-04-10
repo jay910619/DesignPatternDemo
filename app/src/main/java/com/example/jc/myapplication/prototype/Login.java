@@ -8,5 +8,5 @@ package com.example.jc.myapplication.prototype;
 
 public interface Login {
 
-  void login(User user);
+    void login(User user);
 }

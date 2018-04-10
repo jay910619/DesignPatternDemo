@@ -7,13 +7,13 @@ package com.example.jc.myapplication.factory;
  */
 
 public class Test {
-  public static void main(String[] args) {
-    ImageFactory factory = new ImageReaderFactory();
+    public static void main(String[] args) {
+        ImageFactory factory = new ImageReaderFactory();
 
-    factory.getImage(GifImage.class).show();
+        factory.getImage(GifImage.class).show();
 
-    factory.getImage(PngImage.class).show();
+        factory.getImage(PngImage.class).show();
 
-    factory.getImage(PdfImage.class).show();
-  }
+        factory.getImage(PdfImage.class).show();
+    }
 }

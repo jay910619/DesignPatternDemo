@@ -10,11 +10,13 @@ import android.widget.Toast;
  */
 
 public class LoginState implements UserState {
-  @Override public void forward(Context context) {
-    Toast.makeText(context, "转发", Toast.LENGTH_SHORT).show();
-  }
+    @Override
+    public void forward(Context context) {
+        Toast.makeText(context, "转发", Toast.LENGTH_SHORT).show();
+    }
 
-  @Override public void comment(Context context) {
-    Toast.makeText(context, "评论", Toast.LENGTH_SHORT).show();
-  }
+    @Override
+    public void comment(Context context) {
+        Toast.makeText(context, "评论", Toast.LENGTH_SHORT).show();
+    }
 }

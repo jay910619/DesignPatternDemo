@@ -7,9 +7,9 @@ package com.example.jc.myapplication.strategy.simple;
  */
 
 public class Test {
-  public static void main(String[] args) {
-    TrafficCalculator calculator = new TrafficCalculator();
-    calculator.setStrategy(new TaxiStrategy());
-    calculator.calculatePrice(20);
-  }
+    public static void main(String[] args) {
+        TrafficCalculator calculator = new TrafficCalculator();
+        calculator.setStrategy(new TaxiStrategy());
+        calculator.calculatePrice(20);
+    }
 }

@@ -7,13 +7,14 @@ package com.example.jc.myapplication.factory;
  */
 
 public class ImageReaderFactory extends ImageFactory {
-  @Override <T extends Image> T getImage(Class<T> clz) {
-    Image image = null;
-    try {
-      image = (Image) Class.forName(clz.getName()).newInstance();
-    } catch (Exception e) {
-      e.printStackTrace();
+    @Override
+    <T extends Image> T getImage(Class<T> clz) {
+        Image image = null;
+        try {
+            image = (Image) Class.forName(clz.getName()).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (T) image;
     }
-    return (T) image;
-  }
 }

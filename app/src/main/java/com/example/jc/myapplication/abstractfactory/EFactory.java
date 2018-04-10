@@ -6,5 +6,6 @@ package com.example.jc.myapplication.abstractfactory;
 
 public interface EFactory {
     Television produceTelevision();
+
     AirConditioner produceAirConditioner();
 }

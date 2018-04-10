@@ -8,17 +8,19 @@ package com.example.jc.myapplication.iterator;
 
 public class Manager extends Leader {
 
-  private String name;
+    private String name;
 
-  public Manager(String name) {
-    this.name = name;
-  }
+    public Manager(String name) {
+        this.name = name;
+    }
 
-  @Override protected void handle(LeaveRequest request) {
-    System.out.println(name + "审批员工" + request.getName() + " 的请假条，请假天数为" + request.getDay() + "天");
-  }
+    @Override
+    protected void handle(LeaveRequest request) {
+        System.out.println(name + "审批员工" + request.getName() + " 的请假条，请假天数为" + request.getDay() + "天");
+    }
 
-  @Override public int limit() {
-    return 10;
-  }
+    @Override
+    public int limit() {
+        return 10;
+    }
 }

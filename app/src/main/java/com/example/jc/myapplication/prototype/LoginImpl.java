@@ -7,7 +7,8 @@ package com.example.jc.myapplication.prototype;
  */
 
 public class LoginImpl implements Login {
-  @Override public void login(User user) {
-    LoginSession.getInstance().setLoginUser(user);
-  }
+    @Override
+    public void login(User user) {
+        LoginSession.getInstance().setLoginUser(user);
+    }
 }

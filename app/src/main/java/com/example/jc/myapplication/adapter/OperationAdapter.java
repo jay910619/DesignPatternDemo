@@ -27,6 +27,6 @@ public class OperationAdapter extends AbstractDataOperation {
     public int search(int[] array, int i) {
 
 
-       return binarySearch.binarySearch(array, i);
+        return binarySearch.binarySearch(array, i);
     }
 }

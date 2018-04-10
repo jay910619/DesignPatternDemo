@@ -8,5 +8,5 @@ package com.example.jc.myapplication.factory;
 
 public abstract class Image {
 
-  abstract void show();
+    abstract void show();
 }

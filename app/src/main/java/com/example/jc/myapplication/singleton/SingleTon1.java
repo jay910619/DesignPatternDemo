@@ -7,15 +7,15 @@ package com.example.jc.myapplication.singleton;
  */
 
 public class SingleTon1 {
-  private static SingleTon1 sSingleTon;
+    private static SingleTon1 sSingleTon;
 
-  private SingleTon1() {
-  }
-
-  public static synchronized SingleTon1 getInstance() {
-    if (sSingleTon == null) {
-      sSingleTon = new SingleTon1();
+    private SingleTon1() {
     }
-    return sSingleTon;
-  }
+
+    public static synchronized SingleTon1 getInstance() {
+        if (sSingleTon == null) {
+            sSingleTon = new SingleTon1();
+        }
+        return sSingleTon;
+    }
 }

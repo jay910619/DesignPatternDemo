@@ -8,28 +8,28 @@ package com.example.jc.myapplication.iterator;
 
 public class LeaveRequest {
 
-  private String name;
-  private int day;
+    private String name;
+    private int day;
 
-  public LeaveRequest(String name, int day) {
-    this.name = name;
-    this.day = day;
-  }
+    public LeaveRequest(String name, int day) {
+        this.name = name;
+        this.day = day;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public int getDay() {
-    return day;
-  }
+    public int getDay() {
+        return day;
+    }
 
-  public void setDay(int day) {
-    this.day = day;
-  }
+    public void setDay(int day) {
+        this.day = day;
+    }
 
 }

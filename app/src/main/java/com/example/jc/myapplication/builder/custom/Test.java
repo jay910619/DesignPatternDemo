@@ -8,21 +8,21 @@ package com.example.jc.myapplication.builder.custom;
 
 public class Test {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    Waiter waiter = new Waiter();
-    waiter.setMealBuilder(new SubMealBuilderA());
-    Meal meal = waiter.construct();
+        Waiter waiter = new Waiter();
+        waiter.setMealBuilder(new SubMealBuilderA());
+        Meal meal = waiter.construct();
 
-    log(meal);
+        log(meal);
 
-    waiter.setMealBuilder(new SubMealBuilderB());
-    meal = waiter.construct();
+        waiter.setMealBuilder(new SubMealBuilderB());
+        meal = waiter.construct();
 
-    log(meal);
-  }
+        log(meal);
+    }
 
-  private static void log(Meal meal) {
-    System.out.println(meal.getClass() + ":" + meal.getFood() + ":" + meal.getDrink());
-  }
+    private static void log(Meal meal) {
+        System.out.println(meal.getClass() + ":" + meal.getFood() + ":" + meal.getDrink());
+    }
 }

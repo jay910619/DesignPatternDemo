@@ -7,12 +7,12 @@ package com.example.jc.myapplication.singleton;
  */
 
 public class SingleTon {
-  private static SingleTon sSingleTon = new SingleTon();
+    private static SingleTon sSingleTon = new SingleTon();
 
-  private SingleTon() {
-  }
+    private SingleTon() {
+    }
 
-  public static SingleTon getInstance() {
-    return sSingleTon;
-  }
+    public static SingleTon getInstance() {
+        return sSingleTon;
+    }
 }

@@ -5,7 +5,7 @@ package com.example.jc.myapplication.observer;
  */
 
 //抽象观察者类
-public interface LoginObserver{
+public interface LoginObserver {
 
     void login(UserBean loginBean);//登录成功
 

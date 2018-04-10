@@ -5,8 +5,8 @@ package com.example.jc.myapplication.builder.custom;
  */
 
 public class Meal {
-    private  String food;
-    private  String drink;
+    private String food;
+    private String drink;
 
     public String getFood() {
         return food;
