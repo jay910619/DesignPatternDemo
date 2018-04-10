@@ -7,19 +7,21 @@ import android.graphics.Path;
 /**
  * @author jc
  * @time 2018/4/9 下午11:04
- * @desc 绘制路径的方法
+ * @desc 绘制路径的方法  具体命令类
  */
 
 public class DrawPath implements IDraw {
 
-  public Path path;
-  public Paint paint;
+    public Path path;
+    public Paint paint;
 
-  @Override public void draw(Canvas canvas) {
-    canvas.drawPath(path, paint);
-  }
+    @Override
+    public void draw(Canvas canvas) {
+        canvas.drawPath(path, paint);
+    }
 
-  @Override public void undo() {
+    @Override
+    public void undo() {
 
-  }
+    }
 }
