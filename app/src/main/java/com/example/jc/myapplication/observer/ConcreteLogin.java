@@ -1,6 +1,9 @@
 package com.example.jc.myapplication.observer;
 
 
+import android.util.Log;
+import android.widget.Toast;
+
 /**
  * Created by jc on 2017/7/23.
  */
@@ -14,8 +17,9 @@ public class ConcreteLogin extends Login {
     public static ConcreteLogin getInstance() {
         if (concreteLogin == null) {
             synchronized (ConcreteLogin.class) {
-                if (concreteLogin == null)
+                if (concreteLogin == null) {
                     concreteLogin = new ConcreteLogin();
+                }
             }
         }
 
@@ -40,20 +44,25 @@ public class ConcreteLogin extends Login {
 
         Boolean success = false;
         //模拟登录
-        if (password.equals("123") && userName.equals("123")) {
+        if (password.contains("123") && userName.contains("123")) {
             success = true;
         }
 
         for (Object obs : observers) {
             LoginObserver loginObserver = (LoginObserver) obs;
-            if (success)
+            if (success) {
+                Log.v(getClass().getSimpleName(), "登录成功");
                 loginObserver.login(loginBean);
+            } else {
+                Log.v(getClass().getSimpleName(), "登录失败");
+            }
         }
 
     }
 
     @Override
     public void exitNotify() {
+        Log.v(getClass().getSimpleName(), "退出登录");
         for (Object obs : observers) {
             LoginObserver loginObserver = (LoginObserver) obs;
             loginObserver.exit();

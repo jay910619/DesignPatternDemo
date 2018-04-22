@@ -80,7 +80,7 @@ public class User implements Cloneable {
         System.out.println("----- User start-------");
         System.out.println("name : " + getName());
         System.out.println("phone : " + getPhone());
-
+        System.out.println("country: " + getAddress().getCountry());
         System.out.println("city: " + getAddress().getCity());
         System.out.println("province: " + getAddress().getProvince());
         System.out.println("street: " + getAddress().getStreet());

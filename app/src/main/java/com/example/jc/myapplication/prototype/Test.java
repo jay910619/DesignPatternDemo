@@ -33,7 +33,13 @@ public class Test {
 
         System.out.println("---------内存地址判断start----------");
         System.out.println("Name ：" + (user.getName() == newUser.getName()));
+        System.out.println("user Name hashCode：" + (user.getName().hashCode()));
+        System.out.println("newUser Name hashCode：" + newUser.getName().hashCode());
         System.out.println("Address ：" + (user.getAddress() == newUser.getAddress()));
+        System.out.println("user Address hashCode：" + user.getAddress().hashCode());
+        System.out.println("newUser Address hashCode：" + newUser.getAddress().hashCode());
+        System.out.println("user country hashCode：" + user.getAddress().getCountry().hashCode());
+        System.out.println("newUser country hashCode：" + newUser.getAddress().getCountry().hashCode());
         System.out.println("---------内存地址判断end-------------");
 
         newUser.setName("Statue Of Liberty");
@@ -42,9 +48,20 @@ public class Test {
         newUser.getAddress().setCountry("America");
         newUser.getAddress().setProvince("New York");
         newUser.getAddress().setCity("Manhattan");
-        newUser.getAddress().setStreet("Wall Street");
 
         newUser.addLabel("freedom");
+
+
+        System.out.println("--------副本变更后内存地址判断start----------");
+        System.out.println("Name ：" + (user.getName() == newUser.getName()));
+        System.out.println("user Name hashCode：" + (user.getName().hashCode()));
+        System.out.println("newUser Name hashCode：" + newUser.getName().hashCode());
+        System.out.println("Address ：" + (user.getAddress() == newUser.getAddress()));
+        System.out.println("user Address hashCode：" + user.getAddress().hashCode());
+        System.out.println("newUser Address hashCode：" + newUser.getAddress().hashCode());
+        System.out.println("user country hashCode：" + user.getAddress().getCountry().hashCode());
+        System.out.println("newUser country hashCode：" + newUser.getAddress().getCountry().hashCode());
+        System.out.println("---------副本变更后内存地址判断end-------------");
 
         System.out.println("---------修改后的登录用户副本----------");
         newUser.show();
