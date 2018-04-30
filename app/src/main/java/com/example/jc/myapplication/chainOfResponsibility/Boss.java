@@ -1,4 +1,4 @@
-package com.example.jc.myapplication.iterator;
+package com.example.jc.myapplication.chainOfResponsibility;
 
 /**
  * @author jc

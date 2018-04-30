@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.strategy:
                 goTo(com.example.jc.myapplication.strategy.TestActivity.class);
                 break;
+            case R.id.memento:
+                goTo(com.example.jc.myapplication.memento.MementoActivity.class);
+                break;
             default:
                 break;
         }

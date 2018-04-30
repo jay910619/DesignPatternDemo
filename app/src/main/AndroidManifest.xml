@@ -39,7 +39,8 @@
         <activity
             android:name=".strategy.TestActivity"
             android:label="@string/title_activity_strategy" />
-        <activity android:name=".observer.LoginControlActivity"></activity>
+        <activity android:name=".observer.LoginControlActivity" />
+        <activity android:name=".memento.MementoActivity"></activity>
     </application>
 
 </manifest>
