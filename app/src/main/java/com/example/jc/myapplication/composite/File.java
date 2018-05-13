@@ -1,0 +1,40 @@
+package com.example.jc.myapplication.composite;
+
+import java.util.List;
+
+/**
+ * @author jc
+ * @time 2018/5/13 上午11:08
+ * @desc
+ */
+
+public class File extends Dir {
+    public File(String name) {
+        super(name);
+    }
+
+    @Override
+    public void addDir(Dir dir) {
+        throw new UnsupportedOperationException("文件对象不支持该操作");
+    }
+
+    @Override
+    public void rmDir(Dir dir) {
+        throw new UnsupportedOperationException("文件对象不支持该操作");
+    }
+
+    @Override
+    public void clear() {
+        throw new UnsupportedOperationException("文件对象不支持该操作");
+    }
+
+    @Override
+    public void print() {
+        System.out.print(getName());
+    }
+
+    @Override
+    public List<Dir> getFiles() {
+        throw new UnsupportedOperationException("文件对象不支持该操作");
+    }
+}

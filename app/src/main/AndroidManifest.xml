@@ -41,7 +41,8 @@
             android:label="@string/title_activity_strategy" />
         <activity android:name=".observer.LoginControlActivity" />
         <activity android:name=".memento.MementoActivity" />
-        <activity android:name=".mediator.MediatorActivity"></activity>
+        <activity android:name=".mediator.MediatorActivity" />
+        <activity android:name=".adapter.TestAdapterActy"></activity>
     </application>
 
 </manifest>
